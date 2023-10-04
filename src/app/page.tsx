@@ -1,95 +1,124 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import { Footer } from "@/components/Footer";
+import { Search } from "@/components/Search";
+import { AdvertisingBanner } from "@/components/AdvertisingBanner";
+import { AsideBanner } from "@/components/AsideBanner";
+import { News } from "@/components/News";
+import { NewsSelector } from "@/components/NewsSelector";
+import { BigLink } from "@/components/BigLink";
+import { CurrentTime } from "@/components/CurrentTime";
+import { RegularLink } from "@/components/RegularLink";
+import { Currency } from "@/components/Currency";
+import { Value } from "@/components/Value";
+import { IdentValue } from "@/components/IdentValue";
+import { CurrentValue } from "@/components/CurrentValue";
+import { Diff } from "@/components/Diff";
+import { ActionCall } from "@/components/ActionCall";
+import { MainLogo } from "@/components/MainLogo";
+import { Topics } from "@/components/Topics";
+import { SearchForm } from "@/components/SearchForm";
+import { Slogan } from "@/components/Slogan";
+import { FooterTopic } from "@/components/FooterTopic";
+import { Weather } from "@/components/Weather";
+import { EfirButton } from "@/components/EfirButton";
+import { Img } from "@/components/Img";
+
+export type ValueProps = {
+  readonly many: "many";
+  readonly different: "different";
+  readonly props: "props";
+};
+
+const props: ValueProps = {
+  many: "many",
+  different: "different",
+  props: "props",
+} as const;
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+    <main>
+      <News>
+        <NewsSelector>
+          <BigLink {...props} />
+          <BigLink {...props} />
+          <BigLink {...props} />
+          <CurrentTime {...props} />
+        </NewsSelector>
+        <RegularLink {...props} />
+        <RegularLink {...props} />
+        <RegularLink {...props} />
+        <RegularLink {...props} />
+        <RegularLink {...props} />
+        <Currency>
+          <Value>
+            <IdentValue {...props} />
+            <CurrentValue {...props} />
+            <Diff {...props} />
+          </Value>
+          <Value>
+            <IdentValue {...props} />
+            <CurrentValue {...props} />
+            <Diff {...props} />
+          </Value>
+          <Value>
+            <IdentValue {...props} />
+            <CurrentValue {...props} />
+            <Diff {...props} />
+          </Value>
+        </Currency>
+      </News>
+      <AsideBanner>
+        <Img {...props} />
+        <BigLink {...props} />
+        <ActionCall {...props} />
+      </AsideBanner>
+      <Search>
+        <MainLogo {...props} />
+        <Topics>
+          <BigLink {...props} />
+          <BigLink {...props} />
+          <BigLink {...props} />
+          <BigLink {...props} />
+          <BigLink {...props} />
+          <BigLink {...props} />
+          <BigLink {...props} />
+          <BigLink {...props} />
+        </Topics>
+        <SearchForm {...props} />
+        <Slogan {...props} />
+      </Search>
+      <AdvertisingBanner>
+        <Img {...props} />
+      </AdvertisingBanner>
+      <Footer>
+        <FooterTopic>
+          <BigLink {...props} />
+          <Weather {...props} />
+        </FooterTopic>
+        <FooterTopic>
+          <BigLink {...props} />
+          <RegularLink {...props} />
+          <RegularLink {...props} />
+          <RegularLink {...props} />
+        </FooterTopic>
+        <FooterTopic>
+          <BigLink {...props} />
+          <RegularLink {...props} />
+        </FooterTopic>
+        <FooterTopic>
+          <BigLink {...props} />
+          <EfirButton {...props} />
+          <RegularLink {...props} />
+          <RegularLink {...props} />
+          <RegularLink {...props} />
+        </FooterTopic>
+        <FooterTopic>
+          <BigLink {...props} />
+          <RegularLink {...props} />
+          <RegularLink {...props} />
+          <RegularLink {...props} />
+        </FooterTopic>
+      </Footer>
     </main>
-  )
+  );
 }
