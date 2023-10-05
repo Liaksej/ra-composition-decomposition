@@ -1,15 +1,15 @@
 import { ReactNode } from "react";
 
-interface AsideBannerProps {
+interface AsideBannerChildren {
   children: ReactNode;
 }
 
 /**
  * Компонент бокового рекламного блока.
  *
- * @param {AsideBannerProps} children Передаем дочерние компоненты.
+ * @param {AsideBannerChildren} children Передаем дочерние компоненты.
  * @returns {JSX.Element} Компонент бокового рекламного блока.
  **/
-export const AsideBanner = ({ children }: AsideBannerProps) => {
+export const AsideBanner = ({ children }: AsideBannerChildren) => {
   return <div>{children}</div>;
 };

@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 
-interface FooterTopicProps {
+interface FooterTopicChildren {
   children: ReactNode;
 }
 
@@ -10,6 +10,6 @@ interface FooterTopicProps {
  * @param {Footerchildren} children Передаем дочерние компоненты.
  * @returns {JSX.Element} Компонент раздела с тематикой под формой поиска.
  **/
-export const FooterTopic = ({ children }: FooterTopicProps) => {
+export const FooterTopic = ({ children }: FooterTopicChildren) => {
   return <div>{children}</div>;
 };

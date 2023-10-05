@@ -3,7 +3,7 @@ import { ValueProps } from "@/app/page";
 /**
  * Компонент цифрового курса валюты.
  *
- * @param {NewsProps} props Передаем нужную информацию в блок.
+ * @param {ValueProps} props Передаем нужную информацию в блок.
  * @returns {JSX.Element} Компонент цифрового курса валюты.
  **/
 export const CurrentValue = (props: ValueProps) => {

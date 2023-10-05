@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 
-interface NewsSelectorProps {
+interface NewsSelectorChildren {
   children: ReactNode;
 }
 
@@ -8,9 +8,9 @@ interface NewsSelectorProps {
  * Компонент ссылок на группы новостей
  * ("Сейчас в СМИ", "В Германии" и т.д.).
  *
- * @param {NewsProps} children Передаем дочерние компоненты.
+ * @param {NewsSelectorChildren} children Передаем дочерние компоненты.
  * @returns {JSX.Element} Компонент NewsSelector.
  **/
-export const NewsSelector = ({ children }: NewsSelectorProps) => {
+export const NewsSelector = ({ children }: NewsSelectorChildren) => {
   return <div>{children}</div>;
 };

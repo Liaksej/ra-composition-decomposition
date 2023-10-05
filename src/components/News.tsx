@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 
-interface NewsProps {
+interface NewsChildren {
   children: ReactNode;
 }
 
@@ -8,9 +8,9 @@ interface NewsProps {
  * Компонент раздела новостей, который находится над
  * блоком с поисковой строкой.
  *
- * @param {NewsProps} children Передаем дочерние компоненты.
+ * @param {NewsChildren} children Передаем дочерние компоненты.
  * @returns {JSX.Element} Компонент News.
  **/
-export const News = ({ children }: NewsProps) => {
+export const News = ({ children }: NewsChildren) => {
   return <div>{children}</div>;
 };

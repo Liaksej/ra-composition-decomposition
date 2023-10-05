@@ -3,7 +3,7 @@ import { ValueProps } from "@/app/page";
 /**
  * Компонент call to action в блоке бокового рекламного банера.
  *
- * @param {NewsProps} props Передаем нужную информацию в блок.
+ * @param {ValueProps} props Передаем нужную информацию в блок.
  * @returns {JSX.Element} Компонент call to action в блоке бокового рекламного банера.
  **/
 export const ActionCall = (props: ValueProps) => {
